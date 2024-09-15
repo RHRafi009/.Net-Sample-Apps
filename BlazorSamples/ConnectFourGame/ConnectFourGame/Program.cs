@@ -1,4 +1,5 @@
 using ConnectFourGame.Client.Pages;
+using ConnectFourGame.Client.States;
 using ConnectFourGame.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
+builder.Services.AddSingleton<GameState>();
 
 var app = builder.Build();
 

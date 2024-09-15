@@ -14,34 +14,41 @@
     </style>
 </HeadContent>
 
-<nav>
-    <article>
-        @winnerMessage  <button style="@ResetStyle" @onclick="ResetGame">Reset the game</button>
+<div class="center-flex">
+    <div>
+        <article>
+            @winnerMessage  <button style="@ResetStyle" @onclick="ResetGame">Reset the game</button>
+            <br />
+            <span class="alert-danger">@errorMessage</span>
+            <span class="alert-info">@CurrentTurn</span>
+        </article>
         <br />
-        <span class="alert-danger">@errorMessage</span>
-        <span class="alert-info">@CurrentTurn</span>
-    </article>
-    @for (byte i = 0; i < 7; i++)
-    {
-        var col = i;
-        <span title="Click to play a piece" @onclick="() => PlayPiece(col)">🔽</span>
-    }
-</nav>
+        <nav>
+            @for (byte i = 0; i < 7; i++)
+            {
+                var col = i;
+                <span title="Click to play a piece" @onclick="() => PlayPiece(col)">🔽</span>
+            }
+        </nav>
 
-<div>
-    <div class="board">
-        @for (var i = 0; i < 42; i++)
-        {
-            <span class="container">
-                <span></span>
-            </span>
-        }
+        <div>
+            <div class="board">
+                @for (var i = 0; i < 42; i++)
+                {
+                    <span class="container">
+                        <span></span>
+                    </span>
+                }
+            </div>
+            @for (var i = 0; i < 42; i++)
+            {
+                <span class="@pieces[i]"></span>
+            }
+        </div>
     </div>
-    @for (var i = 0; i < 42; i++)
-    {
-        <span class="@pieces[i]"></span>
-    }
 </div>
+
+
 
 @code {
     [Parameter]

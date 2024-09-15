@@ -1,4 +1,3 @@
-using ConnectFourGame.Client.Pages;
 using ConnectFourGame.Client.States;
 using ConnectFourGame.Components;
 

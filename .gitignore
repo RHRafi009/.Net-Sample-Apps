@@ -3,3 +3,8 @@
 ################################################################################
 
 /.vs
+/BlazorSamples/ConnectFourGame/.vs/ConnectFourGame
+/BlazorSamples/ConnectFourGame/ConnectFourGame/bin/Debug/net8.0
+/BlazorSamples/ConnectFourGame/ConnectFourGame/obj
+/BlazorSamples/ConnectFourGame/ConnectFourGame.Client/bin/Debug/net8.0
+/BlazorSamples/ConnectFourGame/ConnectFourGame.Client/obj
